@@ -1,0 +1,6 @@
+store apple orange banana
+1 10 8 7
+2 12 5 9
+3 10 22 11
+4 22 33 22
+5 22 33 44
