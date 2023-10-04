@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <!-- Link to Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-pink-200 min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-md w-96">
+        <h1 class="text-2xl font-bold mb-4">To-Do List</h1>
+        <div class="flex mb-4">
+            <input id="taskInput" type="text" placeholder="Add a new task" class="flex-grow p-2 border rounded-l-md" />
+            <button id="addButton" class="bg-pink-500 text-white p-2 rounded-r-md">Add</button>
+        </div>
+        <ul id="taskList" class="list-disc pl-6"></ul>
+    </div>
+
+    <script>
+        // Function to add a new task
+        function addTask() {
+            const taskInput = document.getElementById("taskInput");
+            const taskText = taskInput.value.trim();
+            if (taskText !== "") {
+                const taskList = document.getElementById("taskList");
+                const listItem = document.createElement("li");
+                listItem.textContent = taskText;
+                listItem.classList.add("mb-2", "text-gray-800");
+                const deleteButton = document.createElement("button");
+                deleteButton.textContent = "Delete";
+                deleteButton.classList.add("text-red-500", "ml-2", "cursor-pointer");
+                deleteButton.addEventListener("click", () => {
+                    listItem.remove();
+                });
+                listItem.appendChild(deleteButton);
+                taskList.appendChild(listItem);
+                taskInput.value = "";
+            }
+        }
+
+        // Add task when clicking the "Add" button
+        document.getElementById("addButton").addEventListener("click", addTask);
+
+        // Add task when pressing Enter key
+        document.getElementById("taskInput").addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+                addTask();
+            }
+        });
+    </script>
+</body>
+</html>

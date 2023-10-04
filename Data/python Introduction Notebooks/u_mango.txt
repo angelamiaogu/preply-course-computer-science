@@ -1,0 +1,21 @@
+Fruit Name Price Color Shape
+Apple 0.99 Red Round
+Banana 0.49 Yellow Curved
+Orange 0.75 Orange Round
+Grapes 1.25 Purple Oval
+Watermelon 3.50 Green & Pink Oval
+Pineapple 1.99 Yellow & Brown Oval
+Strawberry 0.35 Red Heart-shaped
+Mango 1.75 Yellow Oval
+Kiwi 0.95 Green Oval
+Pear 0.89 Green & Brown Oblong
+Blueberry 0.60 Blue Spherical
+Cherry 1.15 Red Spherical
+Peach 1.25 Orange Oval
+Lemon 0.70 Yellow Oval
+Plum 0.80 Purple & Red Oval
+Raspberry 1.50 Red or Black Spherical
+Blackberry 1.20 Black Spherical
+Pomegranate 1.80 Red & Pink Round
+Cantaloupe 2.25 Orange & Green Oval
+Dragonfruit 2.99 Pink & Green Oval

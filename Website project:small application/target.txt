@@ -1,0 +1,21 @@
+website should open open in browser
+{we have mad a website and it is super simple write now,
+now we are goignt o add more stuff into it.
+
+
+}
+
+todo.h
+make it cute
+personal protfolio
+andy's website 
+
+
+
+make a to do-list aplication with appending, removing, and editing
+
+make a chat bot
+
+blog
+
+make one that acually works
