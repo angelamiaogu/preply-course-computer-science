@@ -24,6 +24,10 @@ def hello4():
 def hello5():
     return render_template("blog.html")
 
+@app.route('/aboutme')
+def hello6():
+    return render_template("aboutme.html")
+
 
 
 if __name__ == '__main__':

@@ -1,0 +1,6 @@
+1 beryllium 4 9.012
+2 magnesium 12 24.305
+3 calcium 20 20.078
+4 strontium 38 87.62
+5 barium 56 137.327
+6 radium 88 226
