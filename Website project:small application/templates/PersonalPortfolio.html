@@ -1,12 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About me</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-pink-200 min-h-screen flex flex-col items-center justify-center">
+{% extends 'templates.html' %}
+
+
+{% block content %}
+
+
+
+
+
+
+
+<div class="bg-pink-200 min-h-screen flex flex-col items-center justify-center">
     <header class="text-4xl font-semibold text-pink-700 mb-8">Angela Miao Gu</header>
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -30,8 +33,10 @@
             <p class="text-sm text-gray-600">My little brother's face and his youtube channel: https://www.youtube.com/@Andymiaogu.</p>
         </div>
     </div>
-</body>
-</html>
+</div>
+
+
+{% endblock %}
 
 
 

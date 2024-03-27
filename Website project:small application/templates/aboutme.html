@@ -1,25 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'templates.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Beautiful Resume</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        /* Custom styles */
-        body {
-            background-color: #f9edf4; /* Pink background color */
-        }
-        /* You can add more custom styles here */
-    </style>
-</head>
 
-<body class="p-8">
-    <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-6">
+{% block content %}
+
+    <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-6 text-pink-400">
 
         <!-- Header with Name and Contact Information -->
         <header class="mb-6 text-center">
-            <h1 class="text-3xl font-bold mb-2">Angela<3</h1>
+            <a src="example.com"><h1 class="text-3xl font-bold mb-2 hover:text-pink-500">Angela<3</h1></a>
             <p class="text-lg font-medium">Contact: Banana125@gmail.com</p>
             <p class="text-base">Adress: Earth</p>
             <p class="text-base">Phone: 911</p>
@@ -97,6 +85,6 @@
         </section>
 
     </div>
-</body>
 
-</html>
+
+    {% endblock %}
