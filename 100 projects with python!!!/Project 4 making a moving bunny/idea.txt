@@ -1,0 +1,10 @@
+1. there will be a bunny inside the field
+
+2. when you will click on it it will go to new random position
+
+3. but you can move your bunny with keyboard (left,right,up,down)
+
+4. pressing space it should be able to jump.
+
+5. there should be another object carrot and it should go to carrot n pressing enter button
+
