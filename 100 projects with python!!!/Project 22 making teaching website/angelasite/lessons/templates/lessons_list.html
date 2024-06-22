@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lessons</title>
+</head>
+<body>
+    <h1>Lessons</h1>
+{% for lesson in lessons %}
+    <h2><a href="{% url 'lesson_detail' lesson.slug %}">{{ lesson.title }}</a></h2>
+{% endfor %}
+
+    <ul>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ lesson.title }}</title>
+</head>
+<body>
+    <h1>{{ lesson.title }}</h1>
+    
+
+    {% for data in lesson.content %}
+        <h2>{{ data.question }}</a></h2>
+        <p>{{ data.answer }}</p>
+    {% endfor %}
+
+    <a href="{% url 'lessons_list' %}">Back to lessons</a>
+</body>
+</html>
