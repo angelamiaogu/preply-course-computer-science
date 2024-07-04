@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .clicked {
+            background-color: #fbb6ce; /* Light Pink Color */
+            color: white;
+        }
+
+        .bow {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: pink;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            opacity: 0.5;
+            animation: pump 1s ease-in-out infinite;
+        }
+
+        @keyframes pump {
+            0%, 100% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 0.5;
+            }
+        }
+    </style>
+</head>
+<body class="bg-pink-100 text-gray-900 font-sans leading-relaxed relative">
+    <div class="container mx-auto px-4 py-8 relative overflow-hidden">
+        <header class="mb-12 text-center">
+            <h1 class="text-4xl font-bold text-pink-700 mb-4">Blog Posts</h1>
+        </header>
+        <main class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg relative overflow-hidden">
+            <div id="bows-container" class="absolute inset-0 pointer-events-none z-0">
+                <!-- Bows will be added here by JavaScript -->
+            </div>
+            <ul class="relative z-10">
+                {% for post in posts %}
+                    <li class="mb-4">
+                        <button onclick="handleClick(event)" class="w-full text-left text-2xl font-semibold text-pink-700 hover:underline p-4 bg-white rounded-md shadow-md hover:bg-pink-50 transition duration-200 relative">
+                            <a href="{% url 'post' slug=post.slug %}" class="block">{{ post.title }}</a>
+                        </button>
+                    </li>
+                {% endfor %}
+            </ul>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            createBows();
+        });
+
+        function createBows() {
+            const container = document.getElementById('bows-container');
+            const numBows = 30; // Number of bows
+            const containerWidth = container.offsetWidth;
+            const containerHeight = container.offsetHeight;
+
+            for (let i = 0; i < numBows; i++) {
+                const bow = document.createElement('div');
+                bow.classList.add('bow');
+                container.appendChild(bow);
+                
+                const x = Math.random() * containerWidth;
+                const y = Math.random() * containerHeight;
+                
+                bow.style.left = `${x}px`;
+                bow.style.top = `${y}px`;
+            }
+        }
+
+        function handleClick(event) {
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.classList.remove('clicked');
+            });
+            const button = event.currentTarget;
+            button.classList.add('clicked');
+        }
+    </script>
+</body>
+</html>
